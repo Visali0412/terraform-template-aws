@@ -2,7 +2,7 @@
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "your organization"
+    organization = "visali-demo"
 
     workspaces {
       name = "your workspace"
@@ -19,7 +19,7 @@ terraform {
     }
   }
 
-  required_version = ">= 1.1.7"
+  
 }
 
 # Setup AWS provider
