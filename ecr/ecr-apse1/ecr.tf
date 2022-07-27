@@ -1,5 +1,5 @@
 # Create ECR Repository
-resource "aws_ecr_repository" "lanandra_ip_reader" {
+resource "aws_ecr_repository" "demo-repo" {
   name                 = "your-repository-name"
   image_tag_mutability = "MUTABLE"
 
@@ -8,8 +8,8 @@ resource "aws_ecr_repository" "lanandra_ip_reader" {
   }
 }
 
-resource "aws_ecr_lifecycle_policy" "lanandra_ip_reader" {
-  repository = aws_ecr_repository.lanandra_ip_reader.name
+resource "aws_ecr_lifecycle_policy" "demo-repo" {
+  repository = aws_ecr_repository.demo-repo.name
 
   policy = file("./json-policies/expire-untagged.json")
 }
