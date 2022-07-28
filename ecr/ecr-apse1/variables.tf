@@ -4,3 +4,7 @@ variable "aws_region" {
   description = "AWS Region"
   default     = "ap-southeast-1"
 }
+variable "repo_name" {
+  type = string
+  description = "repository name"
+}
