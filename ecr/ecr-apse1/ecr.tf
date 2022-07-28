@@ -8,8 +8,8 @@ resource "aws_ecr_repository" "demo_repo" {
   }
 }
 
-resource "aws_ecr_lifecycle_policy" "demo-repo" {
-  repository = aws_ecr_repository.demo-repo.name
+resource "aws_ecr_lifecycle_policy" "demo_repo" {
+  repository = aws_ecr_repository.demo_repo.name
 
   policy = file("./json-policies/expire-untagged.json")
 }
